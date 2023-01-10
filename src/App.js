@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import axios from "./axios";
+
 
 function App() {
   const [inputList, setInputList] = useState("");
@@ -17,16 +17,16 @@ function App() {
     setInputList("");
   };
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/todo-list")
-      .then((res) => {
-        setItems(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3000/todo-list")
+  //     .then((res) => {
+  //       setItems(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, []);
 
   // const postItem = (e) => {
   //   e.preventDefault();
